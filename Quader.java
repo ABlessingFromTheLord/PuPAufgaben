@@ -19,6 +19,9 @@ public class Quader {
     }
     public Quader(double laenge){
         this.l = laenge;
+
+        this.d = 1;
+        // or set mass equal volume? which is which?
     }
     
     // Getters
