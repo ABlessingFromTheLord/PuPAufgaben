@@ -17,10 +17,10 @@ public class Quader {
         this.h = hoehe;
         this.d = dichte;
     }
-
     public Quader(double laenge){
         this.l = laenge;
     }
+    
     // Getters
     public double getLaenge() { return this.l; }
     public double getBreite() { return this.b; }
