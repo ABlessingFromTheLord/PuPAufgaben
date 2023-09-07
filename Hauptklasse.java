@@ -14,20 +14,23 @@ public class Hauptklasse {
         */
 
         // Quader
-        Quader q1 = new Quader(10, 5, 4);
+        Quader q1 = new Quader(10, 5, 4, 0.5);
         System.out.println("Volumen von q1 ist : " + q1.berechneVolumen() + "m³");
 
-        Quader q2 = new Quader(5, 5, 5);
+        Quader q2 = new Quader(5, 5, 5, 0.5);
         System.out.println("Volumen von q2 ist : " + q2.berechneVolumen() + "m³");
 
         Quader q3 = new Quader(
                 ((q1.getLaenge() + q2.getLaenge())/2),
                 ((q1.getBreite() + q2.getBreite())/ 2),
-                ((q1.getHoehe() + q2.getHoehe())/2)
+                ((q1.getHoehe() + q2.getHoehe())/2),
+                0.5
                 );
 
-        System.out.println("Laenge, Breite und Hoehe  von q3 :" + q3.getLaenge() + "m, " +q3.getBreite() + "m, " + q3.getHoehe() + "m");
-        System.out.println(" Overfläche der Quader sind: " + q1.berechneOberflaeche() + "m2, " + q2.berechneOberflaeche() + "m2, " + q3.berechneOberflaeche() + "m2");
+        System.out.println("Volumen von q3 ist : " + q3.berechneVolumen() + "m³");
+        System.out.println("Laenge, Breite und Hoehe  von q3 :" + q3.getLaenge() + "cm, " +q3.getBreite() + "cm, " + q3.getHoehe() + "cm");
+        System.out.println(" Overfläche der Quader sind: " + q1.berechneOberflaeche() + "cm2, " + q2.berechneOberflaeche() + "cm2, " + q3.berechneOberflaeche() + "cm2");
+        System.out.println("Dichte der Quader sind: " + q1.berechneGewicht() + "g, " + q2.berechneGewicht() + "g, " + q3.berechneGewicht() + "g");
 
         }
 }
