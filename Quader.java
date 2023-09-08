@@ -45,7 +45,6 @@ public class Quader {
     {
         return (2 * l * b) + (2 * l * h) + (2 * b * h);
     }
-    public double berechneGewicht() { return (this.d * berechneVolumen()); }
-
+    public double berechneGewicht() { return (this.getDichte() * berechneVolumen()); }
 
 }
