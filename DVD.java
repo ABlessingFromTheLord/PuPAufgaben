@@ -1,4 +1,4 @@
-public class DVD extends Artikel{
+public class DVD extends Artikel implements Abspielbar{
     // Fields
     protected String regisseur;
     protected int erscheinungsjahr;
@@ -15,4 +15,13 @@ public class DVD extends Artikel{
         return "DVD: " + " \"" + this.titel + "\"" + " von " + this.regisseur + ", in " + String.valueOf(this.erscheinungsjahr);
     }
 
+    @Override
+    public int getAbspieldauer() {
+        return 120;
+    }
+
+    @Override
+    public String spieleAb() {
+        return " spielt.....";
+    }
 }

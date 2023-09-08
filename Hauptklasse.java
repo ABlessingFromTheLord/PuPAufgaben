@@ -194,7 +194,23 @@ public class Hauptklasse {
                 System.out.println(((Buch) artikelListe[i]).getAutor());
             }
         }
+        System.out.println("\t");
 
+        // Umtauschbare Artikeln auszugeben
+        for (int i = 0; i < artikelListe.length; i++){
+            if (artikelListe[i] instanceof Umtauschbar){
+                System.out.println(((Umtauschbar) artikelListe[i]).umtauschfrist());
+            }
+        }
+        System.out.println("\t");
+
+        // Abspielbar Artikeln abspielen
+        for (int i = 0; i < artikelListe.length; i++){
+            if (artikelListe[i] instanceof Abspielbar && ( ((Abspielbar) artikelListe[i]).getAbspieldauer() > 90)){
+                System.out.print(artikelListe[i].titel +  ((Abspielbar) artikelListe[i]).spieleAb());
+                System.out.println("\t");
+            }
+        }
 
         }
 }

@@ -12,5 +12,4 @@ public class Blueray extends DVD{
         return "Blueray©: " + " \"" + this.titel + "\"" + " von " + this.regisseur
                 + ", in " + String.valueOf(this.erscheinungsjahr);
     }
-
 }

@@ -1,4 +1,4 @@
-public class Buch extends Artikel{
+public class Buch extends Artikel implements Umtauschbar{
     // Fields
     private int seiten;
     private String autor;
@@ -21,5 +21,8 @@ public class Buch extends Artikel{
         return "Buch: " + " \"" + this.titel + "\"" + " von " + this.autor + ", " +
                 String.valueOf(this.auflage) + ". Auflage, " + String.valueOf(this.seiten) + " Seiten" ;
     }
-
+    @Override
+    public int umtauschfrist() {
+        return 30;
+    }
 }
