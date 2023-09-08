@@ -131,11 +131,33 @@ public class Hauptklasse {
         System.out.println(cd2.getBeschreibung());
 
         // Bücher Verwaltung
-        Buch[] liste = new Buch[] {b1, b2};
-        for(int i = 0; i < liste.length; i++) {
-            System.out.println(liste[i].getBarcode() + "\t" +
-                    liste[i].getBeschreibung());
+        Buch[] buecherliste = new Buch[] {b1, b2};
+        for(int i = 0; i < buecherliste.length; i++) {
+            System.out.println(buecherliste[i].getBarcode() + "\t" +
+                    buecherliste[i].getBeschreibung());
         }
+
+        System.out.println("\t");
+
+        DVD d1 = new DVD("Spiderman", 2.99, 96546541651L, "Sam Raimi", 2002);
+        DVD d2 = new DVD("Spiderman 2", 3.99, 91615615616L, "Sam Raimi", 2004);
+        DVD d3 = new DVD("Spiderman 3", 2.99, 91561651151L, "Sam Raimi", 2007);
+
+        Blueray br1 = new Blueray("Spiderman Homecoming", 3.99, 95631531153L, "Jon Watts", 2017);
+        Blueray br2 = new Blueray("The Amazing Spiderman", 3.99, 96531653163L, "Marc Webb", 2012);
+
+        Artikel[] artikelListe = new Artikel[] {b1, b2, cd1, cd2, d1, d2, d3, br1, br2};
+
+        // Gesamtpreis Berechnung
+        double gesamtPreis = 0.00;
+
+        for(int i = 0; i < artikelListe.length; i++) {
+            System.out.println(artikelListe[i].getBarcode() + "\t" +
+                    artikelListe[i].getBeschreibung());
+            gesamtPreis += artikelListe[i].getPreis();
+        }
+
+        System.out.println("Gesamtpreis aller Artikeln: " + gesamtPreis + "€");
 
         }
 }
