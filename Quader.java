@@ -5,7 +5,7 @@ public class Quader {
     private double h;
     private double d;
 
-    // Constructor
+    // Constructors
     public Quader(double laenge, double breite, double hoehe){
         this.l = laenge;
         this.b = breite;
@@ -23,7 +23,8 @@ public class Quader {
         this.d = 1;
         // or set mass equal volume? which is which?
     }
-    
+
+    // Methods
     // Getters
     public double getLaenge() { return this.l; }
     public double getBreite() { return this.b; }
