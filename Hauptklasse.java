@@ -113,7 +113,30 @@ public class Hauptklasse {
             System.out.println(i.bezeichnung + " in " + i.semester + " Semester");
         }*/
 
-        
+
+        // 2 Vererbung
+        Buch b1 = new Buch("UML 2.0", 9.8, 9783897215214L, 139,
+                "Dan Pilone", 2);
+        Buch b2 = new Buch("A Game Of Thrones", 9.99, 9848956416184L, 807, "George R.R. Martin", 1);
+        System.out.println(b1.getBeschreibung());
+        System.out.println("Preis: " + b1.getPreis() + " Euro");
+        System.out.println("Barcode: " + b1.getBarcode());
+        System.out.println(b2.getBeschreibung());
+        System.out.println("Preis: " + b2.getPreis() + " Euro");
+        System.out.println("Barcode: " + b2.getBarcode());
+
+        CD cd1 = new CD("Für Elise", 4.99, 9161561561156L, 177, "Ludwig Van Beethoven");
+        CD cd2 = new CD("Eine kleine Nachtmusik", 7.99, 9874412355636L, 960, "Wolfgang Amadeus Mozart" );
+        System.out.println(cd1.getBeschreibung());
+        System.out.println(cd2.getBeschreibung());
+
+        // Bücher Verwaltung
+        Buch[] liste = new Buch[] {b1, b2};
+        for(int i = 0; i < liste.length; i++) {
+            System.out.println(liste[i].getBarcode() + "\t" +
+                    liste[i].getBeschreibung());
+        }
+
         }
 }
 
