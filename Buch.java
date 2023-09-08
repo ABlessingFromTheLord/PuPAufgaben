@@ -14,6 +14,8 @@ public class Buch extends Artikel{
 
     //  Methods
     // Getters
+    public String getAutor() { return this.autor; }
+
     public String getBeschreibung()
     {
         return "Buch: " + " \"" + this.titel + "\"" + " von " + this.autor + ", " +

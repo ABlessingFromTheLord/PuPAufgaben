@@ -158,6 +158,43 @@ public class Hauptklasse {
         }
 
         System.out.println("Gesamtpreis aller Artikeln: " + gesamtPreis + "€");
+        System.out.println("\t");
+
+        // Nur CDs auszugeben
+        for(int i = 0; i < artikelListe.length; i++) {
+            if(artikelListe[i] instanceof CD) {
+                System.out.println(artikelListe[i].getBeschreibung());
+            }
+        }
+
+        System.out.println("\t");
+
+        // Bücher Barcodes auszugeben
+        for (int i = 0; i < artikelListe.length; i++){
+            if (artikelListe[i] instanceof Buch){
+                System.out.println(artikelListe[i].getBarcode());
+            }
+        }
+
+        // Gesamtpreis aller DVDs zu berechnen
+        double gesamtPreisDVD = 0.00;
+
+        for (int i = 0; i < artikelListe.length; i++){
+            if (artikelListe[i] instanceof DVD && (!(artikelListe[i] instanceof Blueray))){
+                gesamtPreisDVD += artikelListe[i].getPreis();
+            }
+        }
+        System.out.println("Gesamtpreis aller DVDs ist: " + gesamtPreisDVD + "€");
+        System.out.println("\t");
+
+        // Casting Beispiel
+        for(int i = 0; i < artikelListe.length; i++) {
+            if(artikelListe[i] instanceof Buch) {
+                //Buch b = (Buch)artikelListe[i];
+                System.out.println(((Buch) artikelListe[i]).getAutor());
+            }
+        }
+
 
         }
 }

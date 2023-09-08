@@ -13,13 +13,9 @@ public abstract class Artikel {
 
     // Methods
     // Getters
-    public double getPreis() {
-        return this.preis;
-    }
+    public double getPreis() { return this.preis; }
 
-    public long getBarcode() {
-        return this.barcode;
-    }
+    public long getBarcode() { return this.barcode; }
 
     public abstract String getBeschreibung();
 }
