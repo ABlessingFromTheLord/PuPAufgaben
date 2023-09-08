@@ -5,6 +5,8 @@ public class Hauptklasse {
     public static void main(String[]args){
 
         /*
+        // 1 Java Einführung
+
         // Hello World
         System.out.println("HalloWelt!");
 
@@ -14,7 +16,7 @@ public class Hauptklasse {
         double kreisFläche = Math.PI * circleRadius * circleRadius;
         System.out.println("Bei einem Radius von " + circleRadius + "cm beträgt der " +
                 "umfang " + kreisUmfang + "cm und due Fläche " + kreisFläche + "cm");
-         */
+
         // Quader
         Quader q1 = new Quader(10, 5, 4, 0.5);
         System.out.println("Volumen von q1 ist : " + q1.berechneVolumen() + "m³");
@@ -59,6 +61,10 @@ public class Hauptklasse {
         // Entefernen aller Quader die über 5000kg wiegen
         quaderList.removeIf(i -> i.berechneGewicht() >= 100);
         System.out.println("Aktuell Anzahl der Quader: " + quaderList.size());
+         */
+
+        // Assoziationen und Multiplizitäten
+
 
         }
 }
