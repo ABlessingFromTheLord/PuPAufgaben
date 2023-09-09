@@ -1,18 +1,27 @@
 import java.util.ArrayList;
 
-public class Album {
-    public String albumTitle;  // album title
-    public String artist;  // artist name
-    public ArrayList<Track> tracks = new ArrayList<>();  // tracks
-    public int length;  // length of the album in seconds
+public class Album extends MusikItem implements AbspielbarMusik{
+    // Fields
+    private String albumTitle;
+    private Artist artist;
+    private int length;
+    private ArrayList<Track> tracks = new ArrayList<>();  // tracks
 
-    public Album(String albumTitle, String artist) {
-        this.albumTitle = albumTitle;
-        this.artist = artist;
+    // Constructor
+    public Album(String albumTitle, Artist artist) {
+        super(albumTitle, artist);
+
     }
 
+    // Methods
+    // Getters
+    public ArrayList<Track> getTracks() { return this.tracks; }
+
+    // Setters
+    public void addTrack(Track track) { this.tracks.add(track); }
+
     public String getDescription() {
-        return albumTitle + " by " + artist + " (" + getRuntimeString(length) + ")";
+        return this.getTitle() + " by " + this.getArtist().getName() + " (" + getRuntimeString(this.length) + ")";
     }
 
     public void setLength(int hours, int minutes, int seconds) {
@@ -23,19 +32,15 @@ public class Album {
      * Updates the length of the album by calculating the sum of track lengths
      * Developer Note: Call this after adding tracks!
      */
+    @Override
     public void updateLength() {
         this.length = 0;
         for (Track track :
                 tracks) {
-            this.length += track.length;
+            this.length += track.getLength();
         }
     }
 
-    /**
-     * Formats a time in seconds into a String with the format hh:mm:ss or mm:ss if hours = 0
-     * @param timeInSeconds The time in seconds
-     * @return The formatted String
-     */
     public static String getRuntimeString(int timeInSeconds) {
         int tAbs = Math.abs(timeInSeconds);
         if(timeInSeconds >= 60 * 60) {

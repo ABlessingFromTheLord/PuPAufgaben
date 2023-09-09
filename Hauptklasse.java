@@ -215,25 +215,43 @@ public class Hauptklasse {
 
 
         // 3 Arbeiten mit UML
-        Album wywh = new Album("Wish You Were Here", "Pink Floyd");
-        wywh.tracks.add(new Track("Shine On You Crazy Diamond, Pts. 1-5", "Pink Floyd", "Wish You Were Here", 13*60+30));
-        wywh.tracks.add(new Track("Welcome To The Machine", "Pink Floyd", "Wish You Were Here", 7*60+33));
-        wywh.tracks.add(new Track("Have A Cigar", "Pink Floyd", "Wish You Were Here", 5*60+7));
-        wywh.tracks.add(new Track("Wish You Were Here", "Pink Floyd", "Wish You Were Here", 5*60+5));
-        wywh.tracks.add(new Track("Shine On You Crazy Diamond, Pts. 6-9", "Pink Floyd", "Wish You Were Here", 12*60+23));
+        Artist pinkFloyd = new Artist("Pink Floyd");
+        Artist godspeedYouBlackEmperor = new Artist("Godspeed You! Black Emperor");
+        Artist lilWayne = new Artist("Lil Wayne");
+        Artist eminem = new Artist("Eminem");
+        Artist rihanna = new Artist("Rihanna");
+        Artist variousArtists = new Artist("Various Artists");
+
+        Album carter3 = new Album("Carter 3", lilWayne);
+        Album slimShadyLP = new Album("The Slim Shady LP", eminem);
+        Album anti = new Album("ANTI", rihanna);
+
+        Album wywh = new Album("Wish You Were Here", pinkFloyd);
+        wywh.addTrack(new Track("Shine On You Crazy Diamond, Pts. 1-5", pinkFloyd, wywh, 13*60+30));
+        wywh.addTrack(new Track("Welcome To The Machine", pinkFloyd, wywh, 7*60+33));
+        wywh.addTrack(new Track("Have A Cigar", pinkFloyd, wywh, 5*60+7));
+        wywh.addTrack(new Track("Wish You Were Here", pinkFloyd, wywh, 5*60+5));
+        wywh.addTrack(new Track("Shine On You Crazy Diamond, Pts. 6-9", pinkFloyd, wywh, 12*60+23));
         wywh.updateLength();
 
-        Album lysf = new Album("Lift Your Skinny Fists Like Antennas to Heaven", "Godspeed You! Black Emperor");
-        lysf.tracks.add(new Track("Storm", "Godspeed You! Black Emperor", "Wish You Were Here", 22*60+32));
-        lysf.tracks.add(new Track("Static", "Godspeed You! Black Emperor", "Wish You Were Here", 22*60+35));
-        lysf.tracks.add(new Track("Sleep", "Godspeed You! Black Emperor", "Wish You Were Here", 23*60+17));
-        lysf.tracks.add(new Track("Like Antennas To Heaven...", "Godspeed You! Black Emperor", "Wish You Were Here", 18*60+57));
+        Album lysf = new Album("Lift Your Skinny Fists Like Antennas to Heaven", godspeedYouBlackEmperor);
+        lysf.addTrack(new Track("Storm", godspeedYouBlackEmperor, lysf, 22*60+32));
+        lysf.addTrack(new Track("Static", godspeedYouBlackEmperor, lysf, 22*60+35));
+        lysf.addTrack(new Track("Sleep", godspeedYouBlackEmperor, lysf, 23*60+17));
+        lysf.addTrack(new Track("Like Antennas To Heaven...", godspeedYouBlackEmperor, lysf, 18*60+57));
         lysf.updateLength();
+
+        Playlist rap = new Playlist("rap", variousArtists);
+        rap.addTrack(new Track("A milli ", lilWayne, carter3, 2 * 60 + 05));
+        rap.addTrack(new Track("My Name is", eminem, slimShadyLP, 3*60+44));
+        rap.addTrack(new Track("Needed Me", rihanna, anti, 2*60+59));
+        rap.updateLength();
 
         Player player = new Player();
         player.PlayAlbum(wywh);
         player.PlayAlbum(lysf);
-        
+        player.PlayAlbum(rap);
+
     }
 }
 

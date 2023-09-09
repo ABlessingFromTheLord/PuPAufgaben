@@ -1,44 +1,39 @@
 import java.util.ArrayList;
 
-public class Track {
-    public String trackTitle;  // album title
-    public String artist;  // track artist
-    public String album;  // track album
-    public int length;  // length of the track in seconds
+public class Track extends MusikItem{
+    private String trackTitle;  // album title
+    private Artist artist;  // track artist
+    private Album album;  // track album
+    private int l;  // length of the track in seconds
 
-
-    public Track(String trackTitle, String artist, String album, int length) {
-        this.trackTitle = trackTitle;
-        this.artist = artist;
+    // Constructor
+    public Track(String trackTitle, Artist artist, Album album, int length) {
+        super(trackTitle, artist);
         this.album = album;
-        this.length = length;
+        this.l = length;
     }
 
-    public void setLength(int hours, int minutes, int seconds) {
-        this.length = hours * 60 * 60 + minutes * 60 + seconds;
+    // Methods
+    // Getters
+
+    public int getLength() {
+        return l;
+    }
+
+    public Album getAlbum() {
+        return album;
+    }
+
+    // Setters
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+
+    public void setLength(int len) {
+        this.l = len;
     }
 
     public String getDescription() {
-        return artist + " - " + trackTitle + " (" + getRuntimeString(length) + ")";
+        return this.getArtist().getName() + " - " + this.getTitle() + " (" + getRuntimeString(this.l) + ")";
     }
-
-    /**
-     * Formats a time in seconds into a String with the format hh:mm:ss or mm:ss if hours = 0
-     * @param timeInSeconds The time in seconds
-     * @return The formatted String
-     */
-    public static String getRuntimeString(int timeInSeconds) {
-        int tAbs = Math.abs(timeInSeconds);
-        if(timeInSeconds >= 60 * 60) {
-            int hours = Math.floorDiv(tAbs, 60 * 60);
-            int minutes = Math.floorDiv(tAbs % (60 * 60), 60);
-            int seconds = tAbs % 60;
-            return String.format("%02d:%02d:%02d", hours, minutes, seconds);
-        } else {
-            int minutes = Math.floorDiv(tAbs, 60);
-            int seconds = tAbs % 60;
-            return String.format("%02d:%02d", minutes, seconds);
-        }
-    }
-
 }
