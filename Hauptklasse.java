@@ -214,6 +214,7 @@ public class Hauptklasse {
         }*/
 
 
+        /*
         // 3 Arbeiten mit UML
         Artist pinkFloyd = new Artist("Pink Floyd");
         Artist godspeedYouBlackEmperor = new Artist("Godspeed You! Black Emperor");
@@ -251,6 +252,11 @@ public class Hauptklasse {
         player.PlayAlbum(wywh);
         player.PlayAlbum(lysf);
         player.PlayAlbum(rap);
+         */
+
+
+        // 4 Datenstrukturen
+
 
     }
 }
