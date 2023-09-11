@@ -13,7 +13,7 @@ public class Testklasse {
         Person p9 = new Person("Irene", 377);
 
 
-        Binaerbaum baum = new Binaerbaum<>();
+        Binaerbaum baum = new Binaerbaum();
         baum.hinzufuegen(p1);
         baum.hinzufuegen(p2);
         baum.hinzufuegen(p3);
@@ -25,6 +25,7 @@ public class Testklasse {
         baum.hinzufuegen(p9);
 
         // tests
+        System.out.println(baum.finden(66).getName());
         System.out.println(baum.getRightChild().getLeftChild().getRightChild().getPerson().getName());
     }
 }

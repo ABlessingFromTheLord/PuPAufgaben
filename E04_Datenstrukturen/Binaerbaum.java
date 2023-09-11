@@ -1,10 +1,9 @@
 package E04_Datenstrukturen;// This binary tree is implemented using a linked list data structure
 
-public class Binaerbaum<E>{
+public class Binaerbaum implements Comparable<Binaerbaum>{
     // Fields
     private Binaerbaum leftChild;
     private Binaerbaum rightChild;
-    private E Data;
     private Person person;
 
     // Constructor
@@ -16,7 +15,6 @@ public class Binaerbaum<E>{
     // Getters
     public Binaerbaum getLeftChild() { return this.leftChild; }
     public Binaerbaum getRightChild() { return this.rightChild; }
-    public E getData() { return this.Data; }
 
     public Person getPerson(){ return this.person; }
 
@@ -26,9 +24,6 @@ public class Binaerbaum<E>{
     }
     public void setRightChild(Binaerbaum rightChild) {
         this.rightChild = rightChild;
-    }
-    public void setData(E data) {
-        this.Data = data;
     }
     public void setPerson(Person person) { this.person = person; }
 
@@ -109,4 +104,17 @@ public class Binaerbaum<E>{
         return false;
     }
 
+    @Override
+    public int compareTo(Binaerbaum o) {
+        if (this.getPerson().getID() == o.getPerson().getID()){
+            return 0;
+        }
+        else if (this.getPerson().getID() <= o.getPerson().getID()) {
+            return -1;
+        }
+        else {
+            return 1;
+        }
+
+    }
 }
