@@ -33,8 +33,15 @@ public class Binaerbaum<E>{
     public void setPerson(Person person) { this.person = person; }
 
     public void hinzufuegen(Person p){
-        if (this.person.getID() <= p.getID()){
-            // Adding to right side of tree
+        if (this.getPerson() == null){
+            this.setPerson(p);
+            System.out.println("Succesfully added " + p.getName() + " with ID " + p.getID());
+        }
+        else if (p.getID() == this.getPerson().getID()) {
+            System.out.println("ID is already in use, please change ID");
+        }
+        else if (p.getID() <= this.getPerson().getID()){
+            // Adding to left side of tree
             if (this.getLeftChild() != null){
                 // there is a left child tree
                 this.getLeftChild().hinzufuegen(p);
@@ -45,23 +52,60 @@ public class Binaerbaum<E>{
                 Binaerbaum newTree = new Binaerbaum();
                 newTree.setPerson(p);
                 this.setLeftChild(newTree);
+                System.out.println("Succesfully added " + p.getName() + " with ID " + p.getID());
             }
         }
 
-        // Adding to the left side of tree
+        // Adding to the right side of tree
         else {
-
+            if (this.getRightChild() != null){
+                // there is a right child
+                this.getRightChild().hinzufuegen(p);
+            }
+            else {
+                // no right child
+                Binaerbaum newTree = new Binaerbaum();
+                newTree.setPerson(p);
+                this.setRightChild(newTree);
+                System.out.println("Succesfully added " + p.getName() + " with ID " + p.getID());
+            }
 
         }
     }
 
     public Person finden(int id){
+        // if it is the root node
+        if(this.getPerson().getID() == id){
+            return this.getPerson();
+        }
 
+        // it is either of the children
+        else if (id <= this.getPerson().getID()){
+         // it is located on the left subtree
+            if (id == this.getLeftChild().getPerson().getID()){
+               return this.getLeftChild().getPerson();
+            }
+            else{
+                // traversing the left subtree
+                return this.getLeftChild().finden(id);
+            }
+        }
+        else if (id > this.getPerson().getID()) {
+            // it is located on the right subtree
+            if (id == this.getRightChild().getPerson().getID()){
+                return this.getRightChild().getPerson();
+            }
+            else {
+                // traversing the right subtree
+                return this.getRightChild().finden(id);
+            }
+        }
+        return null;
     }
 
     //Helper methods
     public boolean hasChildren(Binaerbaum baum){
-        if(baum.leftChild != null || baum.rightChild != null) { return true };
+        if(baum.leftChild != null || baum.rightChild != null) { return true; }
         return false;
     }
 
