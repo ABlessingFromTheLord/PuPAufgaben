@@ -25,7 +25,7 @@ public class BinaerbaumTest {
         baum.hinzufuegen(p9);
 
         // tests
-        System.out.println(baum.finden(66).getName());
-        System.out.println(baum.getRightChild().getLeftChild().getRightChild().getPerson().getName());
+        System.out.println(baum.finden(p1));
+        System.out.println(baum.getRightChild().getLeftChild().getRightChild().getPerson());
     }
 }

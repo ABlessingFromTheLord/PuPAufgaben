@@ -1,10 +1,10 @@
 package E04_Datenstrukturen;// This binary tree is implemented using a linked list data structure
 
-public class Binaerbaum implements Comparable<Binaerbaum>{
+public class Binaerbaum <E extends Comparable>{
     // Fields
-    private Binaerbaum leftChild;
-    private Binaerbaum rightChild;
-    private Person person;
+    private Binaerbaum<E> leftChild;
+    private Binaerbaum<E> rightChild;
+    private E person;
 
     // Constructor
     public Binaerbaum(){
@@ -13,10 +13,10 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
 
     // Methods
     // Getters
-    public Binaerbaum getLeftChild() { return this.leftChild; }
-    public Binaerbaum getRightChild() { return this.rightChild; }
+    public Binaerbaum<E> getLeftChild() { return this.leftChild; }
+    public Binaerbaum<E> getRightChild() { return this.rightChild; }
 
-    public Person getPerson(){ return this.person; }
+    public E getPerson(){ return this.person; }
 
     // Setters
     public void setLeftChild(Binaerbaum leftChild) {
@@ -25,17 +25,16 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
     public void setRightChild(Binaerbaum rightChild) {
         this.rightChild = rightChild;
     }
-    public void setPerson(Person person) { this.person = person; }
+    public void setPerson(E person) { this.person = person; }
 
-    public void hinzufuegen(Person p){
+    public void hinzufuegen(E p){
         if (this.getPerson() == null){
             this.setPerson(p);
-            System.out.println("Succesfully added " + p.getName() + " with ID " + p.getID());
         }
-        else if (p.getID() == this.getPerson().getID()) {
+        else if (p.compareTo(this.person) == 0) {
             System.out.println("ID is already in use, please change ID");
         }
-        else if (p.getID() <= this.getPerson().getID()){
+        else if (p.compareTo(this.getPerson()) == -1){
             // Adding to left side of tree
             if (this.getLeftChild() != null){
                 // there is a left child tree
@@ -47,7 +46,6 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
                 Binaerbaum newTree = new Binaerbaum();
                 newTree.setPerson(p);
                 this.setLeftChild(newTree);
-                System.out.println("Succesfully added " + p.getName() + " with ID " + p.getID());
             }
         }
 
@@ -62,59 +60,39 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
                 Binaerbaum newTree = new Binaerbaum();
                 newTree.setPerson(p);
                 this.setRightChild(newTree);
-                System.out.println("Succesfully added " + p.getName() + " with ID " + p.getID());
             }
 
         }
     }
 
-    public Person finden(int id){
+    public E finden(E person){
         // if it is the root node
-        if(this.getPerson().getID() == id){
+        if(this.person.compareTo(person) == 0){
             return this.getPerson();
         }
 
         // it is either of the children
-        else if (id <= this.getPerson().getID()){
+        else if (this.person.compareTo(person) == -1){
          // it is located on the left subtree
-            if (id == this.getLeftChild().getPerson().getID()){
-               return this.getLeftChild().getPerson();
+            if (this.getLeftChild().person.compareTo(person) == 0){
+               return this.getLeftChild().person;
             }
             else{
                 // traversing the left subtree
-                return this.getLeftChild().finden(id);
+                return this.getLeftChild().finden(person);
             }
         }
-        else if (id > this.getPerson().getID()) {
+        else if (this.person.compareTo(person) == 1) {
             // it is located on the right subtree
-            if (id == this.getRightChild().getPerson().getID()){
+            if (this.getRightChild().person.compareTo(person) == 0){
                 return this.getRightChild().getPerson();
             }
             else {
                 // traversing the right subtree
-                return this.getRightChild().finden(id);
+                return this.getRightChild().finden(person);
             }
         }
         return null;
     }
 
-    //Helper methods
-    public boolean hasChildren(Binaerbaum baum){
-        if(baum.leftChild != null || baum.rightChild != null) { return true; }
-        return false;
-    }
-
-    @Override
-    public int compareTo(Binaerbaum o) {
-        if (this.getPerson().getID() == o.getPerson().getID()){
-            return 0;
-        }
-        else if (this.getPerson().getID() <= o.getPerson().getID()) {
-            return -1;
-        }
-        else {
-            return 1;
-        }
-
-    }
 }
