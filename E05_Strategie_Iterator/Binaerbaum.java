@@ -100,12 +100,6 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
         return null;
     }
 
-    //Helper methods
-    public boolean hasChildren(Binaerbaum baum){
-        if(baum.leftChild != null || baum.rightChild != null) { return true; }
-        return false;
-    }
-
     @Override
     public int compareTo(Binaerbaum o) {
         if (this.getPerson().getID() == o.getPerson().getID()){
@@ -117,6 +111,34 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
         else {
             return 1;
         }
+    }
+
+    public Iterator<Knoten> createDFSIterator(){
+        DFSIterator dsfi = new DFSIterator();
+        Iterator<Knoten> itk = new Iterator<Knoten>() {
+            @Override
+            public Knoten next() {
+                return null;
+            }
+
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+        }
+
+        if (this.getPerson() != null) {
+
+        }
+
+        else {
+            // empty tree
+
+        }
+    }
+
+    public Iterator<Knoten> createBFSIterator(){
 
     }
+
 }
