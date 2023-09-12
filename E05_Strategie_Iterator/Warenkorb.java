@@ -5,8 +5,8 @@ public class Warenkorb {
     private Zahlungsstrategie zahlungsstrategie;
 
     // Constructor
-    public Warenkorb(){
-
+    public Warenkorb(Zahlungsstrategie zahlungsstrategie){
+        this.zahlungsstrategie = zahlungsstrategie;
     }
 
     // Methods
