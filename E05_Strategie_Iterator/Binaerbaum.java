@@ -115,30 +115,11 @@ public class Binaerbaum implements Comparable<Binaerbaum>{
 
     public Iterator<Knoten> createDFSIterator(){
         DFSIterator dsfi = new DFSIterator();
-        Iterator<Knoten> itk = new Iterator<Knoten>() {
-            @Override
-            public Knoten next() {
-                return null;
-            }
-
-            @Override
-            public boolean hasNext() {
-                return false;
-            }
-        }
-
-        if (this.getPerson() != null) {
-
-        }
-
-        else {
-            // empty tree
-
-        }
+        return null;
     }
 
     public Iterator<Knoten> createBFSIterator(){
-
+        return null;
     }
 
 }
