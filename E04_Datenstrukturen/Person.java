@@ -1,6 +1,6 @@
 package E04_Datenstrukturen;
 
-public class Person {
+public class Person implements Comparable<Person>{
     // Fields
     private String N;
     private int id;
@@ -28,5 +28,18 @@ public class Person {
 
     public void setID(int ID) {
         this.id = ID;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (this.getID() == o.getID()){
+            return 0;
+        }
+        else if (this.getID() <= o.getID()) {
+            return -1;
+        }
+        else {
+            return 1;
+        }
     }
 }
