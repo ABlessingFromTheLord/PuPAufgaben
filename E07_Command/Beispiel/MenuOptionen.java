@@ -1,4 +1,4 @@
-package E07_Command;
+package E07_Command.Beispiel;
 
 import java.io.IOException;
 

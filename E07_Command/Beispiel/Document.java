@@ -1,4 +1,4 @@
-package E07_Command;
+package E07_Command.Beispiel;
 
 import java.io.*;
 
@@ -26,17 +26,19 @@ public class Document {
 
 
     public void Open() throws IOException {
-        BufferedReader bfr = new BufferedReader(new FileReader(this.file));
+        /*BufferedReader bfr = new BufferedReader(new FileReader(this.file));
         String str;
 
         while((str = bfr.readLine()) != null){
             System.out.println(str);
-        }
+        }*/
+        System.out.println("opening file....");
     }
 
     public void Save() throws IOException {
-            FileWriter fw = new FileWriter(this.file.getName());
-            fw.write("I have written in this file");
+            /*FileWriter fw = new FileWriter(this.file.getName());
+            fw.write("I have written in this file");*/
+        System.out.println("Saving file....");
     }
 
     public String getFilePath(){

@@ -1,6 +1,5 @@
-package E07_Command;
+package E07_Command.Beispiel;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ActionSave extends Document implements ActionListenerCommand {

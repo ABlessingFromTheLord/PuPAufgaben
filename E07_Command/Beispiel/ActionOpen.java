@@ -1,6 +1,5 @@
-package E07_Command;
+package E07_Command.Beispiel;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ActionOpen extends Document implements ActionListenerCommand{
