@@ -4,18 +4,22 @@ import java.util.Stack;
 
 public class CommandManager {
     // Fields
-    private Stack<EditorCommand> undoItems;
+    private Stack<EditorCommand> undoItems = new Stack<EditorCommand>();
 
     // Constructor
 
 
     // Methods
     public void executeCommand(EditorCommand cmd){
+        cmd.execute();
         undoItems.push(cmd);
+        System.out.println("Stack contents: " + undoItems.toString());
     }
 
     public void undo(){
-    undoItems.pop();
+        undoItems.peek().undo();
+        undoItems.pop();
+        System.out.println("Stack contents: " + undoItems.toString());
     }
 
 }

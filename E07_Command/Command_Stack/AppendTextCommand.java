@@ -18,8 +18,7 @@ public class AppendTextCommand implements EditorCommand{
     // Methods
     @Override
     public void execute() {
-
-         this.textEditor.aendereText(textEditor.getText() + this.textToAppend);
+        this.textEditor.aendereText(textEditor.getText() + " " + this.textToAppend);
     }
 
     @Override

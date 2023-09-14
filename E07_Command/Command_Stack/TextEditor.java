@@ -19,7 +19,7 @@ public class TextEditor {
 
     public void aendereText(String text){
         this.text = text;
-        System.out.println("New text is "+ this.text);
+        System.out.println(this.text);
     }
 
 }
