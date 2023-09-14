@@ -6,7 +6,8 @@ public class Waldlaeufer implements Character{
     private int treffPunkte = 20;
 
     // Constructor
-
+    public Waldlaeufer() {
+    }
 
     // Methods
     @Override

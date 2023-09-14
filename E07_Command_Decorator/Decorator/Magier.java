@@ -8,6 +8,9 @@ public class Magier implements Character{
     // Constructor
 
 
+    public Magier() {
+    }
+
     // Methods
     @Override
     public int getRuestungswert() {

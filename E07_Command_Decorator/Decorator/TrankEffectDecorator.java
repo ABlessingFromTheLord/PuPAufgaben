@@ -2,13 +2,13 @@ package E07_Command_Decorator.Decorator;
 
 public abstract class TrankEffectDecorator implements Character{
     // Fields
-    protected Character c;
+    protected Character character;
     protected String bezeichnung;
 
     // Constructor
-    public TrankEffectDecorator(Character c, String bezeichnung) {
-        this.c = c;
-        this.bezeichnung = bezeichnung;
+    public TrankEffectDecorator(Character Character, String Bezeichnung) {
+        character = Character;
+        bezeichnung = Bezeichnung;
     }
 
     // Methods
