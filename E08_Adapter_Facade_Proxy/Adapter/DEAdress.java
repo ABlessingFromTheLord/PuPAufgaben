@@ -1,4 +1,4 @@
-package E_08_Adapter_Facade_Proxy.Adapter;
+package E08_Adapter_Facade_Proxy.Adapter;
 
 public class DEAdress implements AddressValidator{
     // Fields

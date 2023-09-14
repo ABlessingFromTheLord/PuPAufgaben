@@ -1,4 +1,4 @@
-package E_08_Adapter_Facade_Proxy.Facade;
+package E08_Adapter_Facade_Proxy.Facade;
 
 public class Testklasse {
     public static void main(String[] args) {
