@@ -1,4 +1,4 @@
-package E07_Command.Command_Stack;
+package E07_Command_Decorator.Command_Stack;
 
 public class AppendTextCommand implements EditorCommand{
     // Fields

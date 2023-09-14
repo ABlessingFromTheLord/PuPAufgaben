@@ -1,4 +1,4 @@
-package E07_Command.Beispiel;
+package E07_Command_Decorator.Beispiel;
 
 import java.io.*;
 
