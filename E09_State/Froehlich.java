@@ -24,7 +24,8 @@ public class Froehlich implements State{
 
     @Override
     public void spielen() {
-        // not specified in task
+        this.tier.setEnergie(-1);
+        this.tier.setHunger(1);
     }
 
     @Override

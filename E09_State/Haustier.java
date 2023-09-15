@@ -111,18 +111,22 @@ public class Haustier {
         while(!input.equals("ende")){
             if (input.equals("spielen")){
                 this.getCurrentState().spielen();
+                checkVitals();
                 continuePlaying();
             }
             else if (input.equals("trainieren")) {
                 this.getCurrentState().trainieren();
+                checkVitals();
                 continuePlaying();;
             }
             else if (input.equals("fuettern")) {
                 this.getCurrentState().fuettern();
+                checkVitals();
                 continuePlaying();;
             }
             else if (input.equals("schlaffen")) {
                 this.getCurrentState().schlaffen();
+                checkVitals();
                 continuePlaying();
             }
             else{
@@ -137,5 +141,17 @@ public class Haustier {
         System.out.println("Dein Haustier ist " + this.currentState.toString() + "\n");
         System.out.println("Was wollen Sie machen? " + "\n");
         startInput();
+    }
+
+    public void checkVitals() {
+        if (this.getEnergie() == 0) {
+            this.setCurrentState(this.getSchlafend());
+        }
+        else if (this.getHunger() > 10) {
+            this.setCurrentState(this.getHungrig());
+        }
+        else if (this.getEnergie() >= 16){
+            this.setCurrentState(this.getFroehlich());
+        }
     }
 }

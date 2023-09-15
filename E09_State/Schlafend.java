@@ -24,6 +24,8 @@ public class Schlafend implements State{
 
     @Override
     public void spielen() {
+        this.tier.setEnergie(-1);
+        this.tier.setHunger(1);
         this.tier.setCurrentState(this.tier.getSchlechtGelaunt());
     }
 
