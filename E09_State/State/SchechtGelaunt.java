@@ -1,12 +1,14 @@
-package E09_State;
+package E09_State.State;
 
-public class Schlafend implements State{
+public class SchechtGelaunt implements State{
     // Fields
     private Haustier tier;
 
     // Constructor
-    public Schlafend(Haustier haustier) {
+    public SchechtGelaunt(Haustier haustier) {
         this.tier = haustier;
+        updateVitals();
+        checkVitals();
     }
 
     // Methods
@@ -18,15 +20,13 @@ public class Schlafend implements State{
     // Setters
     public void setTier(Haustier haustier) {
         this.tier = tier;
-        updateVitals();
-        checkVitals();
     }
 
     @Override
     public void spielen() {
         this.tier.setEnergie(-1);
         this.tier.setHunger(1);
-        this.tier.setCurrentState(this.tier.getSchlechtGelaunt());
+        this.tier.setCurrentState(this.tier.getFroehlich());
     }
 
     @Override
@@ -36,17 +36,18 @@ public class Schlafend implements State{
 
     @Override
     public void fuettern() {
-        this.tier.setCurrentState(this.tier.getFroehlich());
+        this.tier.setCurrentState(this.tier.getSchlechtGelaunt());
     }
 
     @Override
     public void schlaffen() {
-        this.tier.setEnergie(4);
+
     }
 
     @Override
     public void updateVitals() {
-
+        this.tier.setEnergie(-2);
+        this.tier.setHunger(1);
     }
 
     @Override
@@ -62,5 +63,5 @@ public class Schlafend implements State{
         }
     }
 
-    public String toString(){ return "schlafend"; }
+    public String toString(){ return "schlecht gelaunt"; }
 }

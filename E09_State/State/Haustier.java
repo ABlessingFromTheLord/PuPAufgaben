@@ -1,4 +1,4 @@
-package E09_State;
+package E09_State.State;
 
 import java.io.BufferedReader;
 import java.io.IOException;

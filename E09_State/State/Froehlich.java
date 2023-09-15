@@ -1,11 +1,11 @@
-package E09_State;
+package E09_State.State;
 
-public class Hungrig implements State{
+public class Froehlich implements State{
     // Fields
     private Haustier tier;
 
     // Constructor
-    public Hungrig(Haustier haustier) {
+    public Froehlich(Haustier haustier) {
         this.tier = haustier;
         updateVitals();
         checkVitals();
@@ -30,12 +30,12 @@ public class Hungrig implements State{
 
     @Override
     public void trainieren() {
+        this.tier.setCurrentState(this.tier.getFroehlich());
     }
 
     @Override
     public void fuettern() {
-        this.tier.setHunger(-1 *(this.tier.getHunger()));
-        this.tier.setCurrentState(this.tier.getFroehlich());
+        this.tier.setCurrentState(this.tier.getSchlechtGelaunt());
     }
 
     @Override
@@ -45,7 +45,8 @@ public class Hungrig implements State{
 
     @Override
     public void updateVitals() {
-
+        this.tier.setEnergie(-1);
+        this.tier.setHunger(1);
     }
 
     @Override
@@ -61,5 +62,6 @@ public class Hungrig implements State{
         }
     }
 
-    public String toString(){ return "hungrig"; }
+    public String toString(){ return "froehlich"; }
+
 }
