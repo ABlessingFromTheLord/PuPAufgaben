@@ -30,13 +30,11 @@ public class Froehlich implements State{
     @Override
     public void trainieren() {
         this.tier.setCurrentState(this.tier.getFroehlich());
-        System.out.println("Das tier ist fröhlich");
     }
 
     @Override
     public void fuettern() {
         this.tier.setCurrentState(this.tier.getSchlechtGelaunt());
-        System.out.println("Das tier ist leider schlecht gelaunt");
     }
 
     @Override
@@ -54,15 +52,12 @@ public class Froehlich implements State{
     public void checkVitals() {
         if (this.tier.getEnergie() == 0) {
             this.tier.setCurrentState(this.tier.getSchlafend());
-            System.out.println("keine Energie mehr, das tier ist schlafend");
         }
         else if (this.tier.getHunger() > 10) {
             this.tier.setCurrentState(this.tier.getHungrig());
-            System.out.println("Das tier ist hungrig");
         }
         else if (this.tier.getEnergie() >= 16){
             this.tier.setCurrentState(this.tier.getFroehlich());
-            System.out.println("Das tier ist wieder fröhlich");
         }
     }
 

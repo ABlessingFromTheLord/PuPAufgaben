@@ -90,18 +90,11 @@ public class Haustier {
     }
 
     public void start() throws IOException {
-
         startDisplay();
         startInput();
-        System.out.println("start \n\n");
-
-
-        return;
     }
 
     public void startDisplay(){
-        System.out.println("start display\n\n");
-
         System.out.print("Dies ist dein Haustier Yamagotchi\n");
         System.out.println("Es ist " + this.currentState.toString() + "\n");
         System.out.print("Bitte gib ein \"spielen\" ein, um mit ihm zu spielen,\n" +
@@ -112,7 +105,6 @@ public class Haustier {
     }
 
     public void startInput() throws IOException {
-        System.out.println("start input\n\n");
         BufferedReader inputBuffer = new BufferedReader(new InputStreamReader(System.in));
         String input = inputBuffer.readLine();
 
@@ -133,11 +125,15 @@ public class Haustier {
                 this.getCurrentState().schlaffen();
                 continuePlaying();
             }
+            else{
+                System.out.println("Ungültige Eingabe, bitte versuchen Sie es erneut");
+                continuePlaying();
+            }
         }
+        return;
     }
 
     public void continuePlaying() throws IOException {
-        System.out.println("continue playing\n\n");
         System.out.println("Dein Haustier ist " + this.currentState.toString() + "\n");
         System.out.println("Was wollen Sie machen? " + "\n");
         startInput();
