@@ -12,14 +12,19 @@ public class File implements FileSystemComponent{
     }
 
     // Methods
+    // Getters
+    public String getName() {
+        return this.name;
+    }
+
     @Override
     public void print() {
-
+        System.out.println("Falename: " + name + ", size: " + this.getSize());
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return this.size;
     }
 
 }

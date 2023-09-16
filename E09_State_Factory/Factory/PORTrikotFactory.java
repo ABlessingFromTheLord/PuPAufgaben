@@ -1,4 +1,4 @@
-package E09_State.Factory;
+package E09_State_Factory.Factory;
 
 public class PORTrikotFactory extends AbstractTrikotFactory{
     // Fields

@@ -1,4 +1,4 @@
-package E09_State.State;
+package E09_State_Factory.State;
 
 public interface State {
         public void spielen();
