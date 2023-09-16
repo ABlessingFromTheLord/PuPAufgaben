@@ -57,7 +57,7 @@ public class TXTHandler extends DatenHandler{
         String read = "";
         while((read = bfr.readLine()) != null){
             read = bfr.readLine();
-            String[] splitted = read.split("|");
+            String[] splitted = read.split("\\|");
 
             // creating an Tageskurs
             Tageskurs tageskurs = new Tageskurs();

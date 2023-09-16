@@ -15,14 +15,14 @@ public class Testklasse {
 
         CSVHandler csvh = new CSVHandler(csvFile);
 
-        /*for (Tageskurs tk:csvh.einlesen().getAktienkurs()) {
+        for (Tageskurs tk:csvh.einlesen().getAktienkurs()) {
             System.out.println(tk.datum + " " + tk.eroeffnungswert + " " + tk.maximalwert + " " + tk.minimalwert + " " + tk.schlusswert);
-        }*/
+        }
 
-        TXTHandler txth = new TXTHandler(txtFile);
+        /*TXTHandler txth = new TXTHandler(txtFile);
         txth.einlesen();
-            /*for (Tageskurs tk:txth.einlesen().getAktienkurs()) {
-            System.out.println(tk.datum + " " + tk.eroeffnungswert + " " + tk.maximalwert + " " + tk.minimalwert + " " + tk.schlusswert);
+            for (Tageskurs tk:txth.einlesen().getAktienkurs()) {
+            System.out.println(tk.datum + " " + tk.eroeffnungswert + " " + tk.schlusswert+  " " + tk.maximalwert + " " + tk.minimalwert);
         }*/
 
 
