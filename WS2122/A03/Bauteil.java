@@ -10,7 +10,7 @@ public class Bauteil implements BauwerkKomponente{
     public Bauteil(String id) {
         this.id = id;
     }
-    
+
     // Methods
     @Override
     public String getID() {
