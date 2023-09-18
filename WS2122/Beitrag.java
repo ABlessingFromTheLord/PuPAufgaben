@@ -1,4 +1,4 @@
-package SS21;
+package WS2122;
 
 public class Beitrag implements IBeitrag{
     // Fields
