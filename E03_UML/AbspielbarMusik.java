@@ -1,3 +1,5 @@
+package E03_UML;
+
 import java.util.ArrayList;
 
 public interface AbspielbarMusik {

@@ -1,6 +1,8 @@
+package E03_UML;
+
 import java.util.ArrayList;
 
-public class Playlist extends MusikItem implements AbspielbarMusik{
+public class Playlist extends MusikItem implements AbspielbarMusik {
     // Fields
     private int length;
     private ArrayList<Track> tracks = new ArrayList<>();  // tracks

@@ -1,6 +1,10 @@
-import java.util.ArrayList;
+package E03_UML;
 
-public class Track extends MusikItem{
+import E03_UML.Album;
+import E03_UML.Artist;
+import E03_UML.MusikItem;
+
+public class Track extends MusikItem {
     private String trackTitle;  // album title
     private Artist artist;  // track artist
     private Album album;  // track album

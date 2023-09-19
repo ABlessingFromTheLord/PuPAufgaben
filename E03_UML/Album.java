@@ -1,6 +1,8 @@
+package E03_UML;
+
 import java.util.ArrayList;
 
-public class Album extends MusikItem implements AbspielbarMusik{
+public class Album extends MusikItem implements AbspielbarMusik {
     // Fields
     private String albumTitle;
     private Artist artist;

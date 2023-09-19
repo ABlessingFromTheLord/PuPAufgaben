@@ -1,3 +1,5 @@
+package E03_UML;
+
 public class Artist {
     // Fields
     private String name;

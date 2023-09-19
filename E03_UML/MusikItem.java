@@ -1,3 +1,7 @@
+package E03_UML;
+
+import E03_UML.Artist;
+
 public class MusikItem {
     // Fields
     private String t;
