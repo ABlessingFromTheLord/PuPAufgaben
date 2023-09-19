@@ -1,3 +1,7 @@
+package E01_Java;
+
+import E01_Java.Student;
+
 import java.util.*;
 public class Vorlesung {
     // Fields

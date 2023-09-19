@@ -1,3 +1,5 @@
+package E01_Java;
+
 public class Computer {
     // Fields
     public String typ;

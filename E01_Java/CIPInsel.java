@@ -1,3 +1,5 @@
+package E01_Java;
+
 public class CIPInsel {
     public String name;
     public Computer[] computer = new Computer[10];

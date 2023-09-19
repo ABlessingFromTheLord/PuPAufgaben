@@ -1,3 +1,5 @@
+package E01_Java;
+
 public class Quader {
     // Fields
     private double l;

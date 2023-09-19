@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Testklasse {
     public static void main(String[] args) {
-        // QNS In Vorlesung it says Baumstruktur but why are we using an Arraylist in
-        // Vorlesung also?
+        // QNS In E01_Java.Vorlesung it says Baumstruktur but why are we using an Arraylist in
+        // E01_Java.Vorlesung also?
         // what about printing directories within a directory (recusively?)
 ;
         Directory rootDirectory = new Directory("Root Directory");
