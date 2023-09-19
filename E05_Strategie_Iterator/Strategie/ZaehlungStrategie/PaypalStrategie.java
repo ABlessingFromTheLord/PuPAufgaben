@@ -1,6 +1,6 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.ZaehlungStrategie;
 
-public class PaypalStrategie implements Zahlungsstrategie{
+public class PaypalStrategie implements Zahlungsstrategie {
     // Fields
     private String Email;
 

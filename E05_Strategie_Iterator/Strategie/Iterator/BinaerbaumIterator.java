@@ -1,4 +1,4 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.Iterator;
 
 public class BinaerbaumIterator implements Iterator{
     // Fields

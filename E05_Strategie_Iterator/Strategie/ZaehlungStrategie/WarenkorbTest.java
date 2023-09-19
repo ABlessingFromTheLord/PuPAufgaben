@@ -1,4 +1,4 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.ZaehlungStrategie;
 
 public class WarenkorbTest {
     public static void main(String[]args){

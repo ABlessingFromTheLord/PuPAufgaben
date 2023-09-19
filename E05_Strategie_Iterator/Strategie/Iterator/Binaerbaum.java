@@ -1,4 +1,4 @@
-package E05_Strategie_Iterator;// This binary tree is implemented using a linked list data structure
+package E05_Strategie_Iterator.Strategie.Iterator;// This binary tree is implemented using a linked list data structure
 
 import E04_Datenstrukturen.Person;
 

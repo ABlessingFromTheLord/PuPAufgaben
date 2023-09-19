@@ -1,8 +1,8 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.Iterator;
 
 import java.util.Queue;
 
-public class BFSIterator extends BinaerbaumIterator{
+public class BFSIterator extends BinaerbaumIterator {
     // Fields
     private Queue<Knoten> zustand;
 

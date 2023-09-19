@@ -1,4 +1,4 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.Iterator;
 
 import E04_Datenstrukturen.Binaerbaum;
 import E04_Datenstrukturen.Person;

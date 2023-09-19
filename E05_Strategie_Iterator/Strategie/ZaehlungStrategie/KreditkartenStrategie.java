@@ -1,6 +1,6 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.ZaehlungStrategie;
 
-public class KreditkartenStrategie implements Zahlungsstrategie{
+public class KreditkartenStrategie implements Zahlungsstrategie {
     // Fields
     private String Namen;
     private int Kreditkartennummer;

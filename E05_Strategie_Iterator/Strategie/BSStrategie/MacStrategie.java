@@ -1,4 +1,4 @@
-package E05_Strategie_Iterator;
+package E05_Strategie_Iterator.Strategie.BSStrategie;
 
 public class MacStrategie implements Strategie {
 
