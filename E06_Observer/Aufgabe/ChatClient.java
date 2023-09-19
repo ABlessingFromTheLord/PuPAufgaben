@@ -1,4 +1,4 @@
-package E06_Observer;
+package E06_Observer.Aufgabe;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,7 @@ public class ChatClient {
 
     // Constructor
     public ChatClient() {
+        beobachterList = new ArrayList<IChatBeobachter>();
     }
 
     // Methods

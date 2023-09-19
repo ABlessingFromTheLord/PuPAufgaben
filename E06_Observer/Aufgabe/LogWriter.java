@@ -1,6 +1,5 @@
-package E06_Observer;
+package E06_Observer.Aufgabe;
 
-import java.io.File;
 import java.io.FileWriter;
 
 public class LogWriter implements IChatBeobachter{

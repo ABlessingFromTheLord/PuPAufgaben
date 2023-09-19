@@ -1,4 +1,4 @@
-package E06_Observer;
+package E06_Observer.Aufgabe;
 
 import java.util.Date;
 

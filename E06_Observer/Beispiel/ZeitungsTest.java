@@ -1,4 +1,6 @@
-package E06_Observer;
+package E06_Observer.Beispiel;
+
+import E06_Observer.Aufgabe.Abonnent;
 
 public class ZeitungsTest {
     public static void main(String[] args) {

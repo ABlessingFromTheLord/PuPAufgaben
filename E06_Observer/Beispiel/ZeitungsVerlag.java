@@ -1,4 +1,5 @@
-package E06_Observer;
+package E06_Observer.Beispiel;
+
 import java.util.ArrayList;
 import java.util.Date;
 

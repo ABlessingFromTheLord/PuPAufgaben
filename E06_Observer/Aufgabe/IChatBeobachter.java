@@ -1,4 +1,4 @@
-package E06_Observer;
+package E06_Observer.Aufgabe;
 
 public interface IChatBeobachter {
     public void aktualisieren(Nachricht nachricht);

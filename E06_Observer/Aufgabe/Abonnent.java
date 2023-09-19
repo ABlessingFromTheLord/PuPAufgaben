@@ -1,6 +1,9 @@
-package E06_Observer;
+package E06_Observer.Aufgabe;
 
-public class Abonnent implements IAbonnent{
+import E06_Observer.Beispiel.IAbonnent;
+import E06_Observer.Beispiel.Zeitung;
+
+public class Abonnent implements IAbonnent {
     // Fields
     private String Namen;
 
