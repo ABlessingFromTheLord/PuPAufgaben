@@ -1,3 +1,5 @@
+package E02_Vererbung;
+
 public abstract class Artikel {
     // Fields
     protected String titel;

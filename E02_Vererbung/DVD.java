@@ -1,4 +1,6 @@
-public class DVD extends Artikel implements Abspielbar{
+package E02_Vererbung;
+
+public class DVD extends Artikel implements Abspielbar {
     // Fields
     protected String regisseur;
     protected int erscheinungsjahr;
@@ -12,7 +14,7 @@ public class DVD extends Artikel implements Abspielbar{
 
     // Methods
     public String getBeschreibung(){
-        return "DVD: " + " \"" + this.titel + "\"" + " von " + this.regisseur + ", in " + String.valueOf(this.erscheinungsjahr);
+        return "E02_Vererbung.DVD: " + " \"" + this.titel + "\"" + " von " + this.regisseur + ", in " + String.valueOf(this.erscheinungsjahr);
     }
 
     @Override

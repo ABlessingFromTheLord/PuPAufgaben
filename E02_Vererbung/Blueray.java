@@ -1,3 +1,5 @@
+package E02_Vererbung;
+
 public class Blueray extends DVD{
     // Fields
 
@@ -9,7 +11,7 @@ public class Blueray extends DVD{
 
     // Methods
     public String getBeschreibung(){
-        return "Blueray©: " + " \"" + this.titel + "\"" + " von " + this.regisseur
+        return "E02_Vererbung.Blueray©: " + " \"" + this.titel + "\"" + " von " + this.regisseur
                 + ", in " + String.valueOf(this.erscheinungsjahr);
     }
 }

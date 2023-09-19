@@ -1,4 +1,6 @@
-public class CD extends Artikel implements Umtauschbar, Abspielbar{
+package E02_Vererbung;
+
+public class CD extends Artikel implements Umtauschbar, Abspielbar {
     // Fields
     private  int laufzeit;
     private String komponist;
@@ -12,7 +14,7 @@ public class CD extends Artikel implements Umtauschbar, Abspielbar{
 
     // Methods
     public String getBeschreibung(){
-        return "CD: " + " \"" + this.titel + "\"" + " von " + this.komponist + ", " +
+        return "E02_Vererbung.CD: " + " \"" + this.titel + "\"" + " von " + this.komponist + ", " +
                 " dauert " + String.valueOf(this.laufzeit) + " Sekunden";
     }
 

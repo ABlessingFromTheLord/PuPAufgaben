@@ -1,4 +1,6 @@
-public class Buch extends Artikel implements Umtauschbar{
+package E02_Vererbung;
+
+public class Buch extends Artikel implements Umtauschbar {
     // Fields
     private int seiten;
     private String autor;
@@ -18,7 +20,7 @@ public class Buch extends Artikel implements Umtauschbar{
 
     public String getBeschreibung()
     {
-        return "Buch: " + " \"" + this.titel + "\"" + " von " + this.autor + ", " +
+        return "E02_Vererbung.Buch: " + " \"" + this.titel + "\"" + " von " + this.autor + ", " +
                 String.valueOf(this.auflage) + ". Auflage, " + String.valueOf(this.seiten) + " Seiten" ;
     }
     @Override
