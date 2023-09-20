@@ -1,7 +1,5 @@
 package E05_Strategie_Iterator.Strategie.BSStrategie;
 
-import E05_Strategie_Iterator.Strategie.BSStrategie.Strategie;
-
 public class Betriebssystem {
     // Fields
     private Strategie strategie;

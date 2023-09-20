@@ -1,4 +1,4 @@
-package E05_Strategie_Iterator.Strategie.Iterator;
+package E05_Strategie_Iterator.Iterator;
 
 import java.util.Stack;
 
